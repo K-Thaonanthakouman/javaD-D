@@ -26,7 +26,9 @@ public class Main {
             }
         }
 
+        askCharacter.close();
         Character player;
+
         if (job.equals("Warrior")) {
             player = new Warrior(nameCharacter, job);
             player.setHp(10);
@@ -41,7 +43,7 @@ public class Main {
         System.out.println("Vous vous appelez " + player.getName() + " et vous êtes un " + player.getCategory() + " !");
         System.out.println("Vous disposez de " + player.getHp() + " pv et de " + player.getAttack() + " pts d'attaque.");
 
-        askCharacter.close();
+
     }
 }
 
