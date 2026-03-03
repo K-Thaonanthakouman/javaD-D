@@ -2,7 +2,7 @@ package character;
 
 import java.lang.String;
 
-public class Character {
+public abstract class Character {
     private String category;
     private String name;
     private int hp;
