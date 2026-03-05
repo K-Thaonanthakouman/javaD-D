@@ -3,8 +3,13 @@ package game;
 import java.util.Random;
 
 public class Dice {
-    public static void main () {
+    public Dice() {
+
+    }
+
+    public int castDice() {
         Random randomDice = new Random();
-        System.out.println(randomDice.nextInt(6) +1);
+        return randomDice.nextInt(6) + 1;
     }
 }
+

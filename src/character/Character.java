@@ -7,11 +7,14 @@ public abstract class Character {
     private String name;
     private int hp;
     private int attack;
+    private int position = 0;
     private int defaultOffensiveEquip;
 
-    public Character(String name, String category) {
+    public Character(String name, String category, int hp, int attack) {
         this.name = name;
         this.category = category;
+        this.hp = hp;
+        this.attack = attack;
     }
 
     public String getName() {
@@ -44,6 +47,14 @@ public abstract class Character {
 
     public void setAttack(int inputAttack) {
         this.attack = inputAttack;
+    }
+
+    public int getPosition() {
+        return position;
+    }
+
+    public void setPosition(int movement) {
+        position += movement;
     }
 
 }
