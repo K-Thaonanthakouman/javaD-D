@@ -1,5 +1,6 @@
 package game;
 
+
 public class Board {
     private final int[] gameBoard;
 

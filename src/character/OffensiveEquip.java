@@ -1,40 +1,27 @@
 package character;
 
-public class OffensiveEquip {
-    private String item;
-    private String name;
-    private int attackPower;
+public abstract class OffensiveEquip {
+    protected String itemCategory;
+    protected String name;
+    protected int attackPower;
 
     public OffensiveEquip (String itemEquip, String nameEquip, int attackPowerEquip) {
-        this.item = itemEquip;
+        this.itemCategory = itemEquip;
         this.name = nameEquip;
         this.attackPower = attackPowerEquip;
 
     }
 
-    public String getItem() {
-        return item;
-    }
+    public abstract String getItem();
 
-    public void setItem(String inputItem) {
-        this.item = inputItem;
-    }
+    public abstract void setItem(String inputItem);
 
-    public String getName() {
-        return name;
-    }
+    public abstract String getName();
 
-    public void setName(String inputName) {
-        this.name = inputName;
-    }
+    public abstract void setName(String inputName);
 
-    public int getDefensePower() {
-        return attackPower;
-    }
+    public abstract int getAttackPower();
 
-    public void setDefensePower(int inputAttackPower) {
-        this.attackPower = inputAttackPower;
-    }
-
+    public abstract void setAttackPower(int inputAttackPower);
 
 }
