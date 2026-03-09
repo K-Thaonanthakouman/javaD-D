@@ -32,4 +32,9 @@ public class Potion extends DefensiveEquip {
     public void setDefensePower(int inputDefensePower) {
         this.defensePower = inputDefensePower;
     }
+
+    @Override
+    public String toString() {
+        return "Vous consommez une " + name + ", ce qui ajoute " + defensePower + " pts de vie à votre total.";
+    }
 }

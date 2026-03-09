@@ -1,14 +1,26 @@
 package game;
 
+import character.attack.Spell;
+import character.defense.Shield;
+import enemy.Enemy;
+import enemy.category.Gobelin;
+
+import java.util.ArrayList;
 
 public class Board {
-    private final int[] gameBoard;
+    private ArrayList<Cell> gameBoard = new ArrayList<Cell>();
 
     public Board() {
-        gameBoard = new int[64];
+
+        gameBoard.add(new Empty());
+        gameBoard.add(new Gobelin());
+        gameBoard.add(new Spell("spell", "Fireball", 7));
+        gameBoard.add(new Shield("bouclier", "bouclier en fer", 6));
+
+
     }
 
-    public int[] getBoard() {
+    public ArrayList<Cell> getBoard() {
         return gameBoard;
     }
 

@@ -32,4 +32,9 @@ public class Shield extends DefensiveEquip {
     public void setDefensePower(int inputDefensePower) {
         this.defensePower = inputDefensePower;
     }
+
+    @Override
+    public String toString() {
+        return "Vous vous équipez d'un " + name + ", ce qui réduira les dégâts de la prochaine attaque ennemie de " + defensePower + " pts.";
+    }
 }

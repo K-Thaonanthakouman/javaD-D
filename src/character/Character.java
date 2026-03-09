@@ -1,6 +1,7 @@
 package character;
 
-import java.lang.String;
+import character.attack.Spell;
+import character.attack.Weapon;
 
 public abstract class Character {
     protected String category;
@@ -36,5 +37,16 @@ public abstract class Character {
     public abstract int getPosition();
 
     public abstract void setPosition(int movement);
+
+    public abstract Weapon getWeapon();
+
+    public abstract void setWeapon(String newWeapon, String newWeaponName, int newWeaponPower);
+
+    public abstract Spell getSpell();
+
+    public abstract void setSpell(String newSpell, String newSpellName, int newSpellPower);
+
+    @Override
+    public abstract String toString();
 
 }

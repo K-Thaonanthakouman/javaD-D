@@ -1,6 +1,8 @@
 package character;
 
-public abstract class OffensiveEquip {
+import game.Cell;
+
+public abstract class OffensiveEquip extends Cell {
     protected String itemCategory;
     protected String name;
     protected int attackPower;
@@ -23,5 +25,8 @@ public abstract class OffensiveEquip {
     public abstract int getAttackPower();
 
     public abstract void setAttackPower(int inputAttackPower);
+
+    @Override
+    public abstract String toString();
 
 }

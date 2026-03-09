@@ -1,6 +1,8 @@
 package game;
 
 import character.Character;
+import character.attack.Spell;
+import character.attack.Weapon;
 import character.category.Warrior;
 import character.category.Wizard;
 
@@ -41,8 +43,14 @@ public class Menu {
 
         }
 
-        System.out.println("Vous vous appelez " + player.getName() + " et vous êtes un " + player.getCategory() + " !");
-        System.out.println("Vous disposez de " + player.getHp() + " pv et de " + player.getAttack() + " pts d'attaque.");
+        System.out.println(player);
+        // System.out.println("Vous disposez de " + player.getHp() + " pv et de " + player.getAttack() + " pts d'attaque.");
+        if (job.equals("Warrior")) {
+            System.out.println(player.getWeapon());
+        }
+        else {
+            System.out.println(player.getSpell());
+        }
 
         Game start = new Game();
         int choice;

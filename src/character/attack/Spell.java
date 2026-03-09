@@ -31,4 +31,9 @@ public class Spell extends OffensiveEquip {
     public void setAttackPower(int inputAttackPower) {
         this.attackPower = inputAttackPower;
     }
+
+    @Override
+    public String toString() {
+        return "Vous vous équippez du sort " + name + " qui a une puissance de " + attackPower + ".";
+    }
 }

@@ -1,9 +1,13 @@
 package character.category;
 
-import java.lang.String;
 import character.Character;
+import character.attack.Spell;
+import character.attack.Weapon;
 
 public class Warrior extends Character {
+
+    private Weapon equippedWeapon = new Weapon("equippedWeapon", "Wooden Sword", 1);
+    private Spell noSpell = new Spell("noSpell", "No Spell", 0);
 
     public Warrior (String name, String category, int hp, int attack) {
         super(name, category, hp, attack);
@@ -47,5 +51,24 @@ public class Warrior extends Character {
 
     public void setPosition(int movement) {
         this.position += movement;
+    }
+
+    public Weapon getWeapon() {
+        return equippedWeapon;
+    }
+
+    public void setWeapon(String newWeapon, String newWeaponName, int newWeaponPower) {
+        this.equippedWeapon = new Weapon(newWeapon, newWeaponName, newWeaponPower);
+    }
+
+    public Spell getSpell() {
+        return noSpell;
+    }
+
+    public void setSpell(String a, String b, int c) {}
+
+    @Override
+    public String toString() {
+        return "Vous vous appelez " + this.name + ", vous êtes un " + this.category + ". Vous disposez de " + this.hp + " pv et de " + this.attack + " pts d'attaque.";
     }
 }
