@@ -16,43 +16,61 @@ public class Game {
     }
 
     public void startGame(Character player) {
-
-        playTurn(player);
-        endGame();
-    }
-
-    public void playTurn(Character player) {
         int i = 1;
 
         while (player.getPosition() != gameBoard.getBoard().size() -1) {
 
-            System.out.println("Début du tour n°" + i + " : le joueur est à la case " + player.getPosition() + ".");
+            playTurn(player, i);
 
-            int movement = dice.castDice();
-            System.out.println("Lancer de dé : le joueur fait " + movement + ".");
+            String reponse;
+            if (player.getPosition() != gameBoard.getBoard().size() -1) {
 
-            player.setPosition(movement);
-            if (player.getPosition() > gameBoard.getBoard().size() -1) {
-                player.setPosition(- 2*(player.getPosition() - (gameBoard.getBoard().size() -1)));
+                System.out.println("Entrez \"Stop\" pour interrompre le jeu ou continuez.");
+                reponse = playerEntry.nextLine();
+
+                if (reponse.equalsIgnoreCase("Stop")) {
+                    break;
+                }
             }
-            System.out.println("Fin du tour n°" + i + " : le joueur est à la case " + player.getPosition() + ".");
-            playerEntry.nextLine();
             i++;
         }
+
+        endGame(player);
     }
 
-    public void endGame() {
-        System.out.println("Vous avez gagné, la partie est terminée. Voulez-vous rejouer ?");
-        System.out.println("1 - Oui");
-        System.out.println("2 - Non");
-        int reponse = playerEntry.nextInt();
+    public void playTurn(Character player, int i) {
 
-        if (reponse == 1) {
-            main();
+        System.out.println("Début du tour n°" + i + " : le joueur est à la case " + player.getPosition() + ".");
+
+        int movement = dice.castDice();
+        System.out.println("Lancer de dé : le joueur fait " + movement + ".");
+
+        player.setPosition(movement);
+        if (player.getPosition() > gameBoard.getBoard().size() - 1) {
+            player.setPosition(-2 * (player.getPosition() - (gameBoard.getBoard().size() - 1)));
+        }
+
+        System.out.println("Le joueur est à la case " + player.getPosition() + ".");
+        System.out.println(gameBoard.getBoard().get(player.getPosition()).toString());
+
+    }
+
+    public void endGame(Character player) {
+        if (player.getPosition() != (gameBoard.getBoard().size() - 1)) {
+            System.out.println("Interruption de la partie. Bonne nuit !");
         }
         else {
-            System.out.println("Très bien. Adieu alors.");
+            System.out.println("Vous avez gagné, la partie est terminée. Voulez-vous rejouer ?");
+            System.out.println("1 - Oui");
+            System.out.println("2 - Non");
+            int reponse = playerEntry.nextInt();
+
+            if (reponse == 1) {
+                main();
+            }
+            else {
+                System.out.println("Très bien. Adieu alors.");
+            }
         }
     }
-
 }

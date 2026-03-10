@@ -9,7 +9,7 @@ public class Dice {
 
     public int castDice() {
         Random randomDice = new Random();
-        return randomDice.nextInt(6) + 1;
+        return randomDice.nextInt(1) + 1;
     }
 }
 

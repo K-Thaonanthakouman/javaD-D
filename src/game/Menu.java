@@ -26,9 +26,11 @@ public class Menu {
 
             if (job.equalsIgnoreCase("Guerrier")) {
                 job = "Warrior";
-            } else if (job.equalsIgnoreCase("Magicien")) {
+            }
+            else if (job.equalsIgnoreCase("Magicien")) {
                 job = "Wizard";
-            } else {
+            }
+            else {
                 System.out.println("Votre classe n'est pas reconnue.");
             }
         }
@@ -38,13 +40,14 @@ public class Menu {
         if (job.equals("Warrior")) {
             player = new Warrior(nameCharacter, job, 10, 5);
 
-        } else {
+        }
+        else {
             player = new Wizard(nameCharacter, job, 6, 8);
 
         }
 
         System.out.println(player);
-        // System.out.println("Vous disposez de " + player.getHp() + " pv et de " + player.getAttack() + " pts d'attaque.");
+
         if (job.equals("Warrior")) {
             System.out.println(player.getWeapon());
         }
@@ -71,7 +74,6 @@ public class Menu {
                 default:
                     System.out.println("Erreur de saisie !");
             }
-
         }
         while (choice != 1 && choice != 2);
         askCharacter.close();

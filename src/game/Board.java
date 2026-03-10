@@ -12,10 +12,10 @@ public class Board {
 
     public Board() {
 
-        gameBoard.add(new Empty());
-        gameBoard.add(new Gobelin());
-        gameBoard.add(new Spell("spell", "Fireball", 7));
-        gameBoard.add(new Shield("bouclier", "bouclier en fer", 6));
+        gameBoard.add(0, new Empty());
+        gameBoard.add(1, new Gobelin(1, 6));
+        gameBoard.add(2, new Spell("spell", "Fireball", 7));
+        gameBoard.add(3, new Shield("bouclier", "bouclier en fer", 6));
 
 
     }

@@ -33,6 +33,6 @@ public class Weapon extends OffensiveEquip {
 
     @Override
     public String toString() {
-        return "Vous vous équippez d'un " + name + " qui a une puissance de " + attackPower + ".";
+        return "Vous vous équipez d'un " + name + " qui a une puissance de " + attackPower + ".";
     }
 }
