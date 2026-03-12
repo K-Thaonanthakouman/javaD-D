@@ -3,10 +3,10 @@ package character.defense;
 import character.DefensiveEquip;
 
 
-public class Potion extends DefensiveEquip {
+public class Barrier extends DefensiveEquip {
 
-    public Potion (String potion, String potionName, int potionPower) {
-        super (potion, potionName, potionPower);
+    public Barrier (String barrier, String barrierName, int barrierPower) {
+        super(barrier, barrierName, barrierPower);
     }
 
     public String getItem() {
@@ -35,6 +35,6 @@ public class Potion extends DefensiveEquip {
 
     @Override
     public String toString() {
-        return "Vous ramassez une " + name + " et la consommez, ce qui ajoute " + defensePower + " pts de vie à votre total.";
+        return "Vous trouvez le temps de relire votre grimoire de protection. Vous lancez la " + this.name + ", elle a une puissance de " + this.defensePower + " pts.";
     }
 }

@@ -10,7 +10,7 @@ public class Shield extends DefensiveEquip {
     }
 
     public String getItem() {
-        return itemCategory;
+        return this.itemCategory;
     }
 
     public void setItem(String inputItem) {
@@ -18,7 +18,7 @@ public class Shield extends DefensiveEquip {
     }
 
     public String getName() {
-        return name;
+        return this.name;
     }
 
     public void setName(String inputName) {
@@ -26,7 +26,7 @@ public class Shield extends DefensiveEquip {
     }
 
     public int getDefensePower() {
-        return defensePower;
+        return this.defensePower;
     }
 
     public void setDefensePower(int inputDefensePower) {
@@ -35,6 +35,6 @@ public class Shield extends DefensiveEquip {
 
     @Override
     public String toString() {
-        return "Vous vous équipez d'un " + name + ", ce qui réduira les dégâts de la prochaine attaque ennemie de " + defensePower + " pts.";
+        return "Vous avez l'occasion de vous saisir d'un " + this.name + ", il a une puissance de " + this.defensePower + " pts.";
     }
 }

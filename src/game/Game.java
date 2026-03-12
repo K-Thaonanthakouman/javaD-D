@@ -50,7 +50,7 @@ public class Game {
             player.setPosition(-2 * (player.getPosition() - (gameBoard.getBoard().size() - 1)));
         }
 
-        System.out.println("Le joueur est à la case " + player.getPosition() + ".");
+        System.out.println("Le joueur arrive à la case " + player.getPosition() + ".");
         System.out.println(gameBoard.getBoard().get(player.getPosition()).toString());
 
     }

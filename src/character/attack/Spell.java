@@ -34,6 +34,6 @@ public class Spell extends OffensiveEquip {
 
     @Override
     public String toString() {
-        return "Vous vous équipez du sort " + name + " qui a une puissance de " + attackPower + ".";
+        return "Vous trouvez un parchemin de magie. Il contient le sort " + name + " qui a une puissance de " + attackPower + ".";
     }
 }
