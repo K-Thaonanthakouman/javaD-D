@@ -1,8 +1,6 @@
 package game;
 
 import character.Character;
-import character.attack.Spell;
-import character.attack.Weapon;
 import character.category.Warrior;
 import character.category.Wizard;
 
